@@ -9,10 +9,10 @@ import {
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { Button } from "@/ui/button";
 import { useFormState, useFormStatus } from "react-dom";
-import { confirmSignUp } from "@/lib/cognitoActions";
+import { handleConfirmSignUp } from "@/lib/cognitoActions";
 
 export default function ConfirmSignUpForm() {
-  const [errorMessage, dispatch] = useFormState(confirmSignUp, undefined);
+  const [errorMessage, dispatch] = useFormState(handleConfirmSignUp, undefined);
   return (
     <form action={dispatch} className="space-y-3">
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
@@ -89,3 +89,4 @@ function ConfirmButton() {
     </Button>
   );
 }
+
